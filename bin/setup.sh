@@ -18,7 +18,7 @@ then
 fi
 
 # Check for volume
-if [[ ! -d $VOL_DEV ]]
+if [[ ! -b $VOL_DEV ]]
 then
 	echo "Remember to create raw device for IGC!"
 	exit 1
