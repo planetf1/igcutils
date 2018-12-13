@@ -99,9 +99,14 @@ then
 fi
 
 cd ~/ansible-playbook
+if [[ $rc -ne 0 ]]
+then
+  echo "Failed to switch back to playbook before installing"
+  exit 1
+fi
+
 echo "----"
 echo "Ready to install...."
 echo "run:"
-echo "cd ~/ansible-playbook"
-echo "ansible-playbook -b -i inventory install.yaml"
 echo "----"
+ansible-playbook -b -i inventory install.yaml
