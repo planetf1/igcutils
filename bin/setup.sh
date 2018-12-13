@@ -8,7 +8,7 @@ MEDIA_DIR=~/igc-media
 ANSIBLE_USER_DIR=~/ansible-playbook
 
 # Also hardcoded - search below & change
-VOL_DEV=/dev/vdb
+#VOL_DEV=/dev/vdb
 
 # Check for media (dir only)
 if [[ ! -d $MEDIA_DIR ]]
@@ -17,12 +17,13 @@ then
 	exit 1
 fi
 
+# -- Not needed for basic IGC
 # Check for volume
-if [[ ! -b $VOL_DEV ]]
-then
-	echo "Remember to create raw device for IGC!"
-	exit 1
-fi
+#if [[ ! -b $VOL_DEV ]]
+#then
+#	echo "Remember to create raw device for IGC!"
+#	exit 1
+#fi
 
 sudo yum -y update
 rc=$?
