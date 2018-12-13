@@ -25,6 +25,15 @@ fi
 #	exit 1
 #fi
 
+sudo yum -y install epel-release
+rc=$?
+if [[ $rc -ne 0 ]]
+then
+  echo "Failed to apply updates - check sudo/root"
+  exit 1
+fi
+sudo yum repolist
+
 sudo yum -y update
 rc=$?
 if [[ $rc -ne 0 ]]
