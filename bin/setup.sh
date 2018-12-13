@@ -104,7 +104,7 @@ cat > ${ANSIBLE_USER_DIR}/install.yaml <<END
     ibm_infosvr_ug_storage: /dev/vdb
     ibm_infosvr_media_dir: ../igc-media
     ibm_infosvr_media_bin: {   server_tarball: "IS_V11702_Linux_x86_multi.tar.gz", ug_tarball: "is-enterprise-search-11.7.0.2.tar.gz", client_zip: "IS_V11.7.0.2_WINDOWS_CLIENT.zip", entitlements: "IS_V11702_bundle_spec_file_multi.zip" }
-    ibm_infosvr_features: { opsdb: False, ia: False, igc: True, dataclick: False, event_mgmt: True, qs: False, wisd: False, fasttrack: False, dqec: False, igd: False, wlp: False, ises: False, ml_term_assignment: False, omag: False }
+    ibm_infosvr_features: { opsdb: False, ia: False, igc: True, dataclick: False, event_mgmt: False, qs: False, wisd: False, fasttrack: False, dqec: False, igd: False, wlp: False, ises: False, ml_term_assignment: False, omag: False }
     ibm_infosvr_force: { repo: True, domain: False, engine: False, client: False, patch: True }
 END
 if [[ $rc -ne 0 ]]
